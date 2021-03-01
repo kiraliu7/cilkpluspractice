@@ -12,3 +12,5 @@ cilk_for(int i=8; i>=1; 1--){
         maxint=(9-i)*(9-j);
     }
 }
+
+printf("maxint is: %d", maxint);
