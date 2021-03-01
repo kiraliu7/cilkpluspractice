@@ -8,12 +8,12 @@
 
 int main(int argc, const char* argv[])
 {
-    int maxint=0;
+    cilk::reducer_max maxint (0);
     cilk_for(int i=8; i>=1; i--){
         cilk_for(int j=8; j>=1; j--){
             cilk::max_of((9-i)*(9-j), maxint);
         }
     }
 
-    printf("maxint is: %d", maxint);
+    //printf("maxint is: %d", maxint);
 }
