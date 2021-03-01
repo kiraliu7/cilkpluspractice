@@ -8,10 +8,10 @@
 
 int main(int argc, const char* argv[])
 {
-    cilk::reducer_max<int> maxint;
+    maxint=0;
     cilk_for(int i=8; i>=1; 1--){
         cilk_for(int j=8; j>=1; j--){
-            maxint=(9-i)*(9-j);
+            cilk::max_of((9-i)*(9-j), maxint);
         }
     }
 
