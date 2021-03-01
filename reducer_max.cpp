@@ -8,7 +8,7 @@
 
 int main(int argc, const char* argv[])
 {
-    maxint=0;
+    int maxint=0;
     cilk_for(int i=8; i>=1; 1--){
         cilk_for(int j=8; j>=1; j--){
             cilk::max_of((9-i)*(9-j), maxint);
